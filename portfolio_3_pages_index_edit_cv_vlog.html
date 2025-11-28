@@ -1,0 +1,247 @@
+<!-- Multi-page static portfolio (3 pages)
+Files included below: index.html, edit.html, cv.html, vlog.html
+Instructions: copy each section into separate files in your repo (index.html, edit.html, cv.html, vlog.html).
+Upload to GitHub Pages (repo named username.github.io) or Netlify. Replace VIDEO_ID / audio-demo.mp3 / video-demo.mp4 and your personal text.
+-->
+
+/* =========================
+   FILE: index.html
+   ========================= */
+
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ngọc Như — Trang chủ</title>
+  <meta name="description" content="Trang chủ portfolio của Ngọc Như">
+  <style>
+    :root{--bg:#071022;--card:#0b1524;--accent:#8b5cf6;--muted:#9fb0c8}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui;background:linear-gradient(180deg,#041022,#071022);color:#e8f3ff}
+    .wrap{max-width:980px;margin:32px auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center}
+    .nav a{color:var(--muted);margin-left:14px;text-decoration:none}
+    .hero{background:var(--card);padding:20px;border-radius:12px;margin-top:18px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px}
+    footer{text-align:center;color:var(--muted);margin-top:18px;font-size:13px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .btn{background:var(--accent);padding:8px 12px;border-radius:10px;color:white;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700">NN</div>
+      <div><div style="font-weight:700">Ngọc Như</div><div style="font-size:13px;color:var(--muted)">Host · Voice · Editor</div></div></div>
+      <nav class="nav"><a href="index.html">Home</a><a href="edit.html">Portfolio Edit</a><a href="cv.html">CV</a><a href="vlog.html">Vlog</a></nav>
+    </header>
+
+    <div class="hero card">
+      <h1>Xin chào — Mình là <span style="color:var(--accent)">Ngọc Như</span></h1>
+      <p style="color:var(--muted)">Host/MC, voice talent và audio/video editor. Trong site này có 3 khu vực: Portfolio edit, CV chi tiết và vlog đời sống.</p>
+      <div style="margin-top:10px"><a class="btn" href="edit.html">Xem portfolio edit</a> <a class="btn" href="cv.html" style="background:#06b6d4">Xem CV</a></div>
+    </div>
+
+    <div class="grid">
+      <section>
+        <div class="card">
+          <h3>Một vài dự án nổi bật</h3>
+          <ul style="color:var(--muted)">
+            <li>Podcast "Giọng Nói Của Mùa" — Biên tập & mix</li>
+            <li>Showreel dẫn chương trình — Montage + sound design</li>
+            <li>Quảng cáo radio — Thu âm & xử lý VO</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Showreel</h3>
+          <!-- Replace VIDEO_ID -->
+          <iframe width="100%" height="240" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h4>Liên hệ nhanh</h4>
+          <p style="color:var(--muted)">Email: your@email.com<br>Phone: +84 9xx xxx xxx</p>
+          <p><a class="btn" href="vlog.html">Xem vlog</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>© <span id="yr"></span> Ngọc Như — Portfolio</footer>
+  </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
+
+
+/* =========================
+   FILE: edit.html
+   ========================= */
+
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio Edit — Ngọc Như</title>
+  <style>
+    :root{--bg:#071022;--card:#0b1524;--muted:#9fb0c8;--accent:#8b5cf6}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui;background:linear-gradient(180deg,#041022,#071022);color:#e8f3ff}
+    .wrap{max-width:980px;margin:28px auto;padding:18px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .card{background:var(--card);padding:14px;border-radius:12px}
+    .project{margin-top:12px}
+    h3{margin:0}
+    .media{border-radius:8px;overflow:hidden}
+    nav a{color:var(--muted);margin-left:12px;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><div style="font-weight:700">Portfolio Edit</div><nav><a href="index.html">Home</a><a href="cv.html">CV</a><a href="vlog.html">Vlog</a></nav></header>
+
+    <div class="card" style="margin-top:14px">
+      <h3>Podcast — Full Mix & Master</h3>
+      <p style="color:var(--muted)">Tôi làm: chỉnh EQ, giảm noise, nén, cân loudness và final master.</p>
+      <div class="project">
+        <!-- YouTube embed (demo). Replace VIDEO_ID_1 -->
+        <div class="media"><iframe width="100%" height="260" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+
+      <div class="project">
+        <h4>Radio Ad — Clean VO</h4>
+        <p style="color:var(--muted)">Process: de-essing → EQ → compression → format WAV/MP3</p>
+        <div style="margin-top:8px"><audio controls style="width:100%"><source src="audio-demo.mp3" type="audio/mpeg">Your browser does not support audio.</audio></div>
+      </div>
+
+      <div class="project">
+        <h4>Showreel Edit</h4>
+        <p style="color:var(--muted)">Video montage + sound design</p>
+        <div style="margin-top:8px" class="media"><video controls width="100%"><source src="video-demo.mp4" type="video/mp4">No video support</video></div>
+      </div>
+
+      <p style="color:var(--muted);margin-top:10px">Ghi chú: upload file <code>audio-demo.mp3</code> và <code>video-demo.mp4</code> vào repository nếu bạn muốn host trực tiếp.</p>
+    </div>
+
+  </div>
+</body>
+</html>
+
+
+/* =========================
+   FILE: cv.html
+   ========================= */
+
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CV — Ngọc Như</title>
+  <style>
+    body{font-family:system-ui;background:#f6f8fb;color:#0b1220;margin:0}
+    .wrap{max-width:780px;margin:24px auto;padding:20px}
+    .card{background:white;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    h1{margin:0 0 6px}
+    .muted{color:#586976}
+    .section{margin-top:12px}
+    .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .skill{background:#eef2ff;padding:6px 10px;border-radius:999px}
+    .row{display:flex;gap:18px}
+    @media(max-width:720px){.row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="row">
+        <div>
+          <h1>Ngọc Như</h1>
+          <div class="muted">Host · Voice Talent · Audio Editor</div>
+        </div>
+        <div style="margin-left:auto;text-align:right">
+          <div class="muted">Email: your@email.com</div>
+          <div class="muted">Phone: +84 9xx xxx xxx</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Summary</h3>
+        <p class="muted">Kỹ năng dẫn chương trình, thu âm, mix & master podcast, dựng video ngắn cho social.</p>
+      </div>
+
+      <div class="section">
+        <h3>Experience</h3>
+        <ul class="muted">
+          <li><strong>Sky Voice</strong> — Host & Editor (2024–nay). Dẫn chương trình, edit audio, quản lý nội dung.</li>
+          <li><strong>Freelance</strong> — Audio Editor & Producer. Mix/master podcast, quảng cáo radio.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Education & Courses</h3>
+        <p class="muted">Khóa Voice Talent — Sky Voice; Các workshop về audio mixing.</p>
+      </div>
+
+      <div class="section">
+        <h3>Skills & Tools</h3>
+        <div class="skills">
+          <div class="skill">Adobe Audition</div><div class="skill">Reaper</div><div class="skill">Premiere</div><div class="skill">OBS</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Availability</h3>
+        <p class="muted">Nhận job làm voice, edit, và đào tạo theo lịch thỏa thuận.</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+
+
+/* =========================
+   FILE: vlog.html
+   ========================= */
+
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vlog — Ngọc Như</title>
+  <style>
+    body{font-family:system-ui;background:linear-gradient(180deg,#041022,#071022);color:#e8f3ff;margin:0}
+    .wrap{max-width:980px;margin:28px auto;padding:18px}
+    header{display:flex;justify-content:space-between}
+    .card{background:#0b1524;padding:14px;border-radius:12px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    @media(max-width:780px){.grid{grid-template-columns:1fr}}
+    .media{background:#000;border-radius:8px;overflow:hidden}
+    a{color:#9fb0c8;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><div style="font-weight:700">Vlog & Behind-the-scenes</div><nav><a href="index.html">Home</a></nav></header>
+
+    <div class="card" style="margin-top:12px">
+      <p style="color:#9fb0c8">Những video ngắn đời thường: chuẩn bị show, hậu trường thu âm, cuộc sống hàng ngày.</p>
+      <div class="grid">
+        <div>
+          <div class="media"><iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_V1" frameborder="0" allowfullscreen></iframe></div>
+          <div style="margin-top:6px;color:#9fb0c8">Hậu trường: Chuẩn bị show</div>
+        </div>
+        <div>
+          <div class="media"><iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_V2" frameborder="0" allowfullscreen></iframe></div>
+          <div style="margin-top:6px;color:#9fb0c8">Một ngày edit & thu âm</div>
+        </div>
+      </div>
+
+      <p style="color:#9fb0c8;margin-top:12px">Ghi chú: thay VIDEO_ID_V1, VIDEO_ID_V2 bằng ID YouTube thực tế hoặc upload MP4 như file và nhúng bằng thẻ &lt;video&gt;.</p>
+    </div>
+  </div>
+</body>
+</html>
